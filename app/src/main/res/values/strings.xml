@@ -13,4 +13,5 @@
     <string name="btn_three">3</string>
     <string name="btn_dot">.</string>
     <string name="btn_zero">0</string>
+    <string name="too_many_characters">Слишком много символов!</string>
 </resources>

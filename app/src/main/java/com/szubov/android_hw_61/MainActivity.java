@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_seven).toString());
                 }
             }
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_eight).toString());
                 }
             }
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnNine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_nine).toString());
                 }
             }
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_four).toString());
                 }
             }
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_five).toString());
                 }
             }
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_six).toString());
                 }
             }
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_one).toString());
                 }
             }
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_two).toString());
                 }
             }
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_three).toString());
                 }
             }
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnZero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$")) {
+                if (firstCharNotZero()) {
                     addValueToTextView(getText(R.string.btn_zero).toString());
                 }
             }
@@ -157,5 +157,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,
                     getText(R.string.too_many_characters).toString(), Toast.LENGTH_LONG).show();
         }
+    }
+
+    private boolean firstCharNotZero() {
+        return values.isEmpty() || !mTextViewValues.getText().toString().matches("^(0)$");
     }
 }
